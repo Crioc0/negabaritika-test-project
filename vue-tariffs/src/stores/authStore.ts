@@ -3,11 +3,6 @@ import { authApi } from '@/api/authApi'
 import { toastService } from '@/services/toastService'
 import { ref } from 'vue'
 
-interface AuthState {
-  token: string | null
-  status: 'unauthenticated' | 'authenticated' | 'loading'
-  error: null | string
-}
 
 export const useAuthStore = defineStore('auth', () => {
   const token = ref<string | null>(null)
